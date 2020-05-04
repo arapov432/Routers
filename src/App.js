@@ -3,6 +3,8 @@ import {BrowserRouter as Router, Link, Switch, Route, Redirect, useHistory, useL
 import './App.css';
 import Home from './components/homie';
 import ProtectedPage from './components/privat';
+import Somethingelse from './components/some';
+import About from './components/about';
 
 
 
@@ -13,27 +15,32 @@ function App() {
       <div className="App">
         <div className="jumbotron textcenter">
           <h1>This is kgmamba </h1>
-          
+
           <h5>This online market </h5>
         </div>
-        <div className="container">
+        
+        
         <Router>
-       
-        <SignButton/>
-        <ul>
-          <li>
-            <Link to="/">About</Link>
+        <div style={{marginTop:-35}}>
+        <nav className="navbar navbar-expand-sm bg-dark navbar-dark">
+        <ul className="navbar-nav">
+          <li className="nav-item">
+            <Link to="/" className="nav-link">About</Link>
           </li>
-          <li>
-            <Link to="/homie">Home</Link>
+          <li className="nav-item">
+            <Link to="/homie" className="nav-link">Home</Link>
           </li>
-          <li>
-            <Link to="/privates">Privates</Link>
+          <li className="nav-item">
+            <Link to="/privates" className="nav-link">Privates</Link>
           </li>
-          <li>
-            <Link to="/somethingelse">Something else</Link>
+          <li className="nav-item">
+            <Link to="/somethingelse" className="nav-link">Something else</Link>
           </li>
         </ul>
+        </nav>
+        </div>
+        <div className="container">
+        <SignButton/>
       <Switch>
   <Route exact path="/" children={<About/>}/>
   <Route path="/homie" children={<Home/>}/>
@@ -42,8 +49,11 @@ function App() {
           <PrivRoute path="/privates" children={<ProtectedPage/>}/>
           
       </Switch>
+   
+      </div>
   </Router>
-  </div>
+  
+  
     </div>
   );
 }
@@ -106,19 +116,6 @@ return (
   </div>
 )
 }
-function About() {
-  return (
-    <div>
-        <h1>Homes Page</h1>
-    </div>
-) 
-}
-function Somethingelse() {
-  return (
-    <div>
-        <h1>Something else Page</h1>
-    </div>
-) 
-}
+
 
 export default App;
