@@ -13,6 +13,7 @@ export class About extends Component {
                     <img className="card-img-top" src={Photo} alt="photos"/>
                     <h3 className="card-title">Azamat Arapov</h3>
                     <h5>Software engineer</h5>
+                    <h5>Founder of kgmamba</h5>
                     <h5>North American University</h5>
                     </div>
                 </div>
@@ -25,8 +26,8 @@ export class About extends Component {
       Skilled in System Administration, MacOS, Windows, Linux, VMware, <br/>
       Computer Science, Servers, and Software Engineering. Strong information <br/>
       technology professional graduated from North American University (NAU)</p>
-      <h5>Title description, Dec 7, 2017</h5>
-      <p>Some text..</p>
+      <h5>Date of publish, May 1, 2020</h5>
+      <p>Software Engineer..</p>
       <p>Sunt in culpa qui officia deserunt mollit anim id est laborum<br/>
       consectetur adipiscing elit, sed do eiusmod tempor incididunt ut.</p>
       </div>        
@@ -35,5 +36,7 @@ export class About extends Component {
         )
     }
 }
+
+
 
 export default About

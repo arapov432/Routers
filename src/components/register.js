@@ -1,5 +1,5 @@
 import React from 'react'
-import {BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom'
+import {BrowserRouter as Router, Route, Switch, Link, useRouteMatch } from 'react-router-dom'
 const peeps = [
     {
       name: 'React Router',
@@ -107,19 +107,20 @@ return(
 
 }
 function Register() {
+    let {path, url}= useRouteMatch();
     return (
   
             <Router>
             <div style={{width: 1000, margin: '0 auto'}}>
           <ul>
-            <li><Link to='/'>Perfect</Link></li>
-            <li><Link to='/topic'>Topics</Link></li>
+            <li><Link to={`${url}/`}>Perfect</Link></li>
+            <li><Link to={`${url}/topic`}>Topics</Link></li>
           </ul>
 
           <hr />
                 <Switch>
-                    <Route exact path="/" component={Perfect}/>
-                    <Route path="/topic" component={Topic}></Route>
+                    <Route exact path={`${path}/`} component={Perfect}/>
+                    <Route path={`${path}/topic`} component={Topic}></Route>
                 </Switch>
                 </div>
             </Router>
