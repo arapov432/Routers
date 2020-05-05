@@ -40,3 +40,26 @@ export class About extends Component {
 
 
 export default About
+for(var i=0; i<=20; i++){
+    if(i%3 === 0){
+        console.log("Fuzz");
+    }
+    if(i%5=== 0){
+        console.log("Buzzz");
+    }
+    else{
+        console.log(i);
+    }
+}
+for (let i =100; i<=200; i++){
+    console.log('Testing ' +i);
+    if(i%7 == 0){
+        console.log("Found it! " +i);
+        break;
+    }
+}
+var result =1, num=9;
+for(let i = 0; i<=12; i++){
+    result = num * i;
+console.log("9 x " +i + " = " +result);
+}

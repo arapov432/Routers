@@ -3,6 +3,7 @@ import {BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom'
 import About from './about'
 import Home from './homie'
 import ProtectedPage from './privat'
+import Onemore from './onemore'
 const topics = [
     {
         name: 'React Router',
@@ -118,10 +119,14 @@ export default function Another() {
               <li>
                   <Link to="/topicss">Topics </Link>
               </li>
+              <li>
+                  <Link to="/onemore"> One More </Link>
+              </li>
           </ul>
           <hr/>
           <Route exact path="/" component={News}/>
           <Route path="/topicss" component={Topics}/>
+          <Route exact path="/onemore" component={Onemore}/>
         </div>
         </Router>
     )
